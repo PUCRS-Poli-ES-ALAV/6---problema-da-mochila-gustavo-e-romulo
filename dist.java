@@ -1,15 +1,18 @@
 public class dist {
+    static int countItr = 0;
 
     public static void main(String[] args) {
-        String s1 = "Casablanca";
-        String s2 = "Portentoso";
+        String s1 = "aa";
+        String s2 = "ba";
         int resposta = ED(s1, s2, s1.length()-1, s2.length()-1);
-        System.out.println(resposta);
+        System.out.println("RESP: "+resposta+" ; ITR: "+countItr);
+        System.out.println();
         
     }
 
     public static int ED(String S, String T, int i, int j){
         //System.out.println("i: "+i+", j: "+j);
+        countItr++;
         if(i==-1 && j==-1){
             //System.out.println("end");
             return 0;
